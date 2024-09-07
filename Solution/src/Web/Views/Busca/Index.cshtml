@@ -1,0 +1,397 @@
+@model FiltersBusca;
+@{
+    ViewData["Title"] = "Busca";
+}
+
+<link href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css" rel="stylesheet">
+<script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js" defer></script>
+
+<link rel="stylesheet" href="/css/home.css">
+
+<div class="content-title teste">
+    <h4 class="page-title text-green-univesp">Buscar Alunos</h4>
+</div>
+
+<div class="container px-0">
+    <form id="form" class="row">
+        <div class="form-group col-lg-3 col-12">
+            <label for="nome">Nome:</label>
+            <input id="nome" style="max-height: 38px;" name="nome" class="form-control" />
+        </div>
+        <div class="form-group col-lg-3 col-12">
+            <label for="RA">RA:</label>
+            <input id="RA" style="max-height: 38px;" name="RA" class="form-control" />
+        </div>
+        <div class="form-group col-lg-3 col-12">
+            <label for="cpf">CPF:</label>
+            <input id="cpf" style="max-height: 38px;" name="cpf" class="form-control" />
+        </div>
+        <div class="form-group col-lg-3 col-12">
+            <label for="eixo">Eixo do Aluno:</label>
+            <select id="eixo" name="eixo" class="form-control">
+                <option value="" selected>TODOS OS EIXOS</option>
+                <option value="Licenciatura">Licenciatura</option>
+                <option value="Computação">Computação</option>
+                <option value="Negócios">Negócios</option>
+            </select>
+        </div>
+        <div class="form-group col-lg-3 col-12">
+            <label for="matricula">Status da Matricula:</label>
+            <select id="matricula" name="matricula" class="form-control">
+                <option value="0" selected>TODOS OS STATUS</option>
+                <option value="1">ATIVA</option>
+                <option value="2">TRANCADA</option>
+                <option value="3">CONCLUIDA</option>
+                <option value="4">CANCELADA</option>
+            </select>
+        </div>
+        <div class="form-group col-lg-3 col-12">
+            <label for="professor">É Professor:</label>
+            <select id="professor" name="professor" class="form-control">
+                <option value="" selected>Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+        </div>
+        <div class="form-group col-lg-3 col-12">
+            <label for="ensinomedio_Escola_Publica">Ensino Médio em Escola Pública:</label>
+            <select id="ensinomedio_Escola_Publica" name="ensinomedio_Escola_Publica" class="form-control">
+                <option value="" selected>Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+        </div>
+        <div class="form-group col-lg-3 col-12">
+            <label for="faculdade">Já cursou alguma faculdade:</label>
+            <select id="faculdade" name="faculdade" class="form-control">
+                <option value="" selected>Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+        </div>
+        <div class="form-group col-lg-3 col-12">
+            <label for="servidor_publico">É Servidor Público:</label>
+            <select id="servidor_publico" name="servidor_publico" class="form-control">
+                <option value="" selected>Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+        </div>
+        <div class="form-group col-lg-3 col-12">
+            <label for="sptrans">Cadastro Bilhete Estudante:</label>
+            <select id="sptrans" name="sptrans" class="form-control">
+                <option value="" selected>Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+        </div>
+        <div class="form-group col-lg-3 col-12">
+            <label for="autorizacao_imagem">Autorização de Imagem:</label>
+            <select id="autorizacao_imagem" name="autorizacao_imagem" class="form-control">
+                <option value="" selected>Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+        </div>
+        <div class="form-group col-lg-3 col-12">
+            <label for="nascimento">Nascido até:</label>
+            <input id="nascimento" name="nascimento" class="form-control" type="date"/>
+            
+        </div>
+        
+    </form>
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-3"></div>
+        <div class="form-group col-lg-3 col-12 btn-buscar">
+            <button type="button" id="buscar" onclick="busca(this);" class="btn btn-red form-control">
+                <div id="btn-buscar">
+                    <i class="fas fa-search ml-1"></i>
+                </div>
+                <div hidden id="btn-buscar-loading" class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </button>
+        </div>
+        <div class="form-group col-lg-3 col-12 btn-buscar">
+            <button type="button" onclick='document.getElementById("form").reset();$("select[multiple]").multipleSelect("refresh");$("#buscar").click()' class="btn btn-red form-control">
+                Limpar
+            </button>
+        </div>
+    </div>
+</div>
+ <div class="dropdown">
+            <button class="btn-excel dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                <span id="gerando-relatorio" style="display:none;">
+                    Gerando relatório...
+                    <span class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </span>
+                </span>
+                <img src="~/img/icons/excel.png" />
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <button class="dropdown-item" onclick="downloadRelatorioFiltrado()">Download Relatório dos Alunos Filtrado</button>
+            </div>
+        </div>
+<table id="table_alunos" class="table display w-100">
+    <thead>
+        <tr>
+            <th>CPF</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Celular</th>
+            <th>Endereço</th>
+            <th>CEP</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<div id="modalStatus" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="nome_aluno"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body row">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" type="text/css" href="/lib/data-tables/datatables.min.css" />
+<script type="text/javascript" src="/lib/data-tables/datatables.min.js"></script>
+
+<style>
+    .progress {
+        background: #ddd;
+    }
+
+    .progress-bar {
+        background: var(--smartagro-blue-light);
+    }
+
+    .fa-star {
+        color: gold;
+        text-shadow: 1px 1px 1px #0002;
+    }
+    .modal-backdrop{
+        background: none !important;
+        width: 0;
+        height: 0;
+        z-index: -999;
+    }
+    .modal {
+    position: absolute !important;
+    top: calc(0%) !important;
+    left:  50% !important;
+    transform: translate(-50%,0) !important;
+    height: fit-content !important;
+    width: 30% !important;
+    }
+
+    @@media only screen and (hover: none) and (pointer: coarse){
+    
+    .modal {
+        width: 100% !important;
+        }
+    
+}
+    
+</style>
+
+<script>
+    let table;        
+    const busca = (btn) => {
+        table.ajax.reload();
+        btn.blur();
+    }
+
+    const getFilters = () => {
+        let professor = document.getElementById('professor').value;
+        let ensinomedio_Escola_Publica = document.getElementById('ensinomedio_Escola_Publica').value;
+        let cursou_Faculdade = document.getElementById('faculdade').value;
+        let servidor_Publico = document.getElementById('servidor_publico').value;
+        let cadastro_SpTrans = document.getElementById('sptrans').value;
+        let autorizacao_Imagem = document.getElementById('autorizacao_imagem').value;
+        let nascimento = document.getElementById("nascimento").value;
+        
+        if(professor === "sim"){
+            professor = true;
+        } else if (professor === "nao"){
+            professor = false;
+        } else {
+            professor = null;
+        }
+        
+        if(ensinomedio_Escola_Publica === "sim"){
+            ensinomedio_Escola_Publica = true;
+        } else if (ensinomedio_Escola_Publica === "nao"){
+            ensinomedio_Escola_Publica = false;
+        } else {
+            ensinomedio_Escola_Publica = null;
+        }
+
+        if(cursou_Faculdade === "sim"){
+            cursou_Faculdade = true;
+        } else if (cursou_Faculdade === "nao"){
+            cursou_Faculdade = false;
+        } else {
+            cursou_Faculdade = null;
+        }
+        
+        if(servidor_Publico === "sim"){
+            servidor_Publico = true;
+        } else if (servidor_Publico === "nao"){
+            servidor_Publico = false;
+        } else {
+            servidor_Publico = null;
+        }
+        
+        if(cadastro_SpTrans === "sim"){
+            cadastro_SpTrans = true;
+        } else if (cadastro_SpTrans === "nao"){
+            cadastro_SpTrans = false;
+        } else {
+            cadastro_SpTrans = null;
+        }
+        
+        if(autorizacao_Imagem === "sim"){
+            autorizacao_Imagem = true;
+        } else if (autorizacao_Imagem === "nao"){
+            autorizacao_Imagem = false;
+        } else {
+            autorizacao_Imagem = null;
+        }
+        
+        data = {
+            nome: document.getElementById('nome').value,
+            cpf: document.getElementById('cpf').value,
+            professor: professor,
+            ensinomedio_Escola_Publica: ensinomedio_Escola_Publica,
+            cursou_Faculdade:cursou_Faculdade,
+            servidor_Publico: servidor_Publico,
+            cadastro_SpTrans: cadastro_SpTrans,
+            autorizacao_Imagem: autorizacao_Imagem,
+            RA: document.getElementById('RA').value,
+            status_Matricula: parseInt(document.getElementById('matricula').value),
+            eixo: document.getElementById('eixo').value,
+            nascimento:nascimento
+        };
+        return data;
+    }
+
+    const loadTable = () => {
+
+        return $("#table_alunos").DataTable({
+            scrollY: 400,
+            scrollX: true,
+            pageLength: 25,
+            responsive: true,
+            processing: true,
+            serverSide: true,
+            ordering: true,
+            order: [[1, 'asc']],
+            searching: false,
+            paging: true,
+            language: {
+                url: '/lib/data-tables/pt-br.json'
+            },
+            ajax: {
+                url: "/busca/load_table",
+                type: "POST",
+                contentType: "application/json",
+                dataType: "json",
+                data: function (data) {                    
+                    data.filters = getFilters();
+                    return JSON.stringify(data);
+                }
+            },
+            columns: [
+                {
+                    data: "dadosAluno.cpf",
+                    render: function (data, type, row) {
+                        return `<a href="/aluno/${data}">${data}</a>`;
+                    }
+                },
+                {
+                    data: "dadosAluno.nome"
+                },                    
+                {
+                    data: "dadosAluno.email"},
+                { data: "dadosAluno.celular" },
+                { data: "dadosAluno.endereco" },
+                { data: "dadosAluno.cep" },                
+            ]
+        });
+    }
+
+    $(document).ready(function () {
+
+        document.addEventListener('keypress', function(event) {
+            if (event.keyCode == 13) {
+                busca(document.getElementById("buscar"));
+            }
+        });
+        $('.multiple-select').multipleSelect({
+            minimumCountSelected: 1,
+            placeholder: ' - Selecione - ',
+            formatSelectAll: function () {
+                return 'Selecionar Todos'
+            },
+            formatAllSelected: function () {
+                return 'Todos Selecionados'
+            },
+            formatCountSelected: function (ct, total) {
+                return ct + ' de ' + total + ' selecionados';
+            },
+            formatNoMatchesFound: function () {
+                return 'Nenhum resultado encontrado';
+            },
+        })
+        //$("#carregando-processos").hide();
+        table = loadTable();
+
+        table.on('draw', function () {
+
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    });
+    
+    const downloadRelatorioFiltrado = async () => 
+    {
+        toggleLoading();
+            await $.ajax({
+               type: "POST",
+               url: "/busca/baixar-relatorio-filtrado",
+               dataType: "text",
+               contentType: "application/json",
+               data: JSON.stringify(getFilters())           
+           }).done(function (data) {           
+               toggleLoading();
+               if (!data) {
+                   alert("Nenhum aluno encontrado para esse ciclo.");
+               } else {
+                   var link = document.createElement("a");
+                   document.body.appendChild(link);
+                   link.setAttribute("type", "hidden");
+                   link.href = "data:text/plain;base64," + data;
+                   link.download = `Relatorio_Filtrado.xlsx`;
+                   link.click();
+                   document.body.removeChild(link);
+               }        
+           }).fail(function (xhr, status, error) {
+               console.log(error);
+               toggleLoading();
+               toastr.error(`Não foi possivel baixar o arquivo!`);
+               toastr.error(xhr.responseText);
+               console.log(`Code: ${xhr} Status: ${status}`);
+               console.log('Erro baixando o relatório: ' + error);
+
+           })
+    }
+</script>
