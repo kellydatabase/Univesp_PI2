@@ -60,6 +60,9 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorWeb.Controllers
             aluno.Endereco = dadosAluno.Endereco;
             aluno.Cep = dadosAluno.Cep;
             aluno.Nome = dadosAluno.Nome;
+            aluno.Observacao_1 = dadosAluno.Observacao_1;
+            aluno.Observacao_2 = dadosAluno.Observacao_2;
+            aluno.Observacao_3 = dadosAluno.Observacao_3;
             aluno.Celular = dadosAluno.Celular;
             aluno.Tel_Fixo = dadosAluno.Tel_Fixo;
             aluno.Professor = dadosAluno.Professor;

@@ -23,6 +23,12 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegrador.ApplicationCore.Business
         public string Email { get; set; }
         public string Celular { get; set; }
         public string Tel_Fixo { get; set; }
+        public string Nome_Escola_Ensino_Medio { get; set; }
+        public string Observacao_1 { get; set; }
+        public string Observacao_2 { get; set; }
+        public string Observacao_3 { get; set; }
+
+        public DateTime Data_Conclusao_Ensino_Medio { get; set; }
         public DateTime Ultima_Atualizacao { get; set; }
         public DateTime Data_Emissao { get; set; }
         public DateTime Data_Nascimento { get; set; }

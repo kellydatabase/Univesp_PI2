@@ -85,6 +85,14 @@
                 <p class="item-title">Gênero: </p>
                 <p class="item-data">@Model.Aluno.Genero</p>
             </div>
+            <div class="info-item">
+                <p class="item-title">Observação 1: </p>
+                <p class="item-data">@Model.Aluno.Observacao_1</p>
+            </div> 
+            <div class="info-item">
+                <p class="item-title">Observação 3: </p>
+                <p class="item-data">@Model.Aluno.Observacao_3</p>
+            </div> 
         </div>
         <div class="bloco-dados-gerais">   
             <div class="info-item">
@@ -129,7 +137,21 @@
             <div class="info-item">
                 <p class="item-title">Autorização de imagem: </p>
                 <p class="item-data">@(Model.Aluno.Autorizacao_Imagem ? "Sim" : "Não")</p>
-            </div>   
+            </div>  
+            <div class="info-item">
+                <p class="item-title">Nome do colégio que cursou o ensino médio: </p>
+                <p class="item-data">@Model.Aluno.Nome_Escola_Ensino_Medio</p>
+            </div> 
+            <div class="info-item">
+                <p class="item-title">Data de conclusão do ensino médio:</p>
+                <p class="item-data">@Model.Aluno.Data_Conclusao_Ensino_Medio.ToString("dd/MM/yyyy")</p>
+            </div>
+            
+            <div class="info-item">
+                <p class="item-title">Observação 2: </p>
+                <p class="item-data">@Model.Aluno.Observacao_2</p>
+            </div> 
+            
             <div class="info-item">
                 <p class="item-title">Data da última atualização:</p>
                 <p class="item-data">@Model.Aluno.Ultima_Atualizacao.ToString("dd/MM/yyyy HH:mm")</p>
@@ -181,6 +203,18 @@
                         <div class="info-item">
                             <p class="item-title">Email: </p>
                             <input type="text" id="editar_email" class="item-data form-control" value="@Model.Aluno.Email" />
+                        </div>
+                        <div class="info-item">
+                            <p class="item-title">Observação 1: </p>
+                            <input type="text" id="editar_observacao_1" class="item-data form-control" value="@Model.Aluno.Observacao_1" />
+                        </div>
+                        <div class="info-item">
+                            <p class="item-title">Observação 2: </p>
+                            <input type="text" id="editar_observacao_2" class="item-data form-control" value="@Model.Aluno.Observacao_2" />
+                        </div>
+                        <div class="info-item">
+                            <p class="item-title">Observação 3: </p>
+                            <input type="text" id="editar_observacao_3" class="item-data form-control" value="@Model.Aluno.Observacao_3" />
                         </div>
                         @* <div class="info-item"> *@
                         @*     <p class="item-title">É professor:</p> *@
@@ -361,6 +395,9 @@
         let tel_fixo = $("#editar_tel_fixo").val();
         // let professor = $("#editar_professor").val() === "Sim" ? true : false;
         let email = $("#editar_email").val();
+        let observacao_1 = $("#editar_observacao_1").val();
+        let observacao_2 = $("#editar_observacao_2").val();
+        let observacao_3 = $("#editar_observacao_3").val();
         let autorizacao_imagem = $("#editar_imagem").val() === "Sim" ? true : false;
         let cadastro_SpTrans = $("#editar_sptrans").val() === "Sim" ? true : false;        
         // console.log(professor)
@@ -378,6 +415,9 @@
             email: email,
             autorizacao_imagem: autorizacao_imagem,
             cadastro_SpTrans: cadastro_SpTrans,
+            observacao_1:observacao_1,
+            observacao_2:observacao_2,
+            observacao_3:observacao_3
         }
         console.log(data);
         const id_aluno = parseInt(document.getElementById('id_aluno').value);

@@ -141,11 +141,17 @@
                                         <th>Curso Escolhido na Uniceu:</th>
                                         <th>Cadastro Bilhete Estudante(SPTrans):</th>
                                         <th>Autorização de imagem:</th>
+                                        <th>Nome do colégio que cursou ensino médio:</th>
+                                        <th>Data de conclusão do ensino médio:</th>
+                                        <th>Observação 1:</th>
+                                        <th>Observação 2:</th>
+                                        <th>Observação 3:</th>
                                     </tr>
                                 </thead>`;
             for (let entry of data) {
                 let dataNascimento = new Date(entry.data_Nascimento);
                 let dataEmissao = new Date(entry.data_Emissao);
+                let dataConclusao = new Date(entry.data_Conclusao_Ensino_Medio);
                 let status;
                 switch (entry.id_Status_Matricula){
                     case 1:
@@ -186,6 +192,13 @@
                 htmlLista += "<td>" + entry.eixo+ "</td>";
                 htmlLista += "<td>" + (entry.cadastro_SpTrans ? "Sim" : "Não")+ "</td>";
                 htmlLista += "<td>" + (entry.autorizacao_Imagem ? "Sim" : "Não")+ "</td>";
+                htmlLista += "<td>" + entry.nome_Escola_Ensino_Medio+ "</td>";
+                htmlLista += "<td>" + `${dataConclusao.getDate()}/${dataConclusao.getMonth()+1}/${dataConclusao.getFullYear()}` + "</td>";
+                htmlLista += "<td>" + entry.observacao_1+ "</td>";
+                htmlLista += "<td>" + entry.observacao_2+ "</td>";
+                htmlLista += "<td>" + entry.observacao_3+ "</td>";
+
+
                 htmlLista += "</tr>";
             }
 
@@ -257,7 +270,7 @@
         }).fail(function (xhr, status, error) {
             toggleLoading();
 
-            //toastr.error(xhr.responseText);
+            
             toastr.error("Houve um erro em algum campo do arquivo, verifique se todos os campos são do tipo texto");
         });
     }

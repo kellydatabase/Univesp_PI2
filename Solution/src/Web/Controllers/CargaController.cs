@@ -68,7 +68,7 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorWeb.Controllers
 
         [HttpPost]
         [Route("baixar-alunos")]
-        public async Task<string> AdicionarAlunos()
+        public async Task<string> BaixarAlunos()
         {
             List<Aluno> alunos = await _alunoRepository.ObterTodos();
 
@@ -82,7 +82,8 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorWeb.Controllers
         [HttpPost("carga-alunos")]
         public async Task<JsonResult> UploadTabela([FromBody] CargaAlunosDTO dados)
         {
-            var bytes = Convert.FromBase64String(dados.ArquivoBase64.Split(new[] { ";base64," }, StringSplitOptions.RemoveEmptyEntries)[1]);
+            try {
+                var bytes = Convert.FromBase64String(dados.ArquivoBase64.Split(new[] { ";base64," }, StringSplitOptions.RemoveEmptyEntries)[1]);
 
             var res_carga = ExcelSpreadsheetService.CargaExcelAlunos(new MemoryStream(bytes));
 
@@ -111,6 +112,11 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorWeb.Controllers
                     aluno_banco.Autorizacao_Imagem = a.Autorizacao_Imagem;
                     aluno_banco.Cadastro_SpTrans = a.Cadastro_SpTrans;
                     aluno_banco.Servidor_Publico = a.Servidor_Publico;
+                    aluno_banco.Nome_Escola_Ensino_Medio = a.Nome_Escola_Ensino_Medio;
+                    aluno_banco.Observacao_1 = a.Observacao_1;
+                    aluno_banco.Observacao_2 = a.Observacao_2;
+                    aluno_banco.Observacao_3 = a.Observacao_3;
+                    aluno_banco.Data_Conclusao_Ensino_Medio = a.Data_Conclusao_Ensino_Medio;
                     aluno_banco.Ultima_Atualizacao = DateTime.Now;
 
                     if(dados.Confirmado == false)
@@ -133,6 +139,11 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorWeb.Controllers
             
 
             return Json("Ok");
+            }
+            catch(Exception e) {
+                Console.WriteLine(e);
+                throw e;
+            }
         }
         #endregion
         
