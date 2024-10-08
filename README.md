@@ -99,7 +99,7 @@ http://localhost:8080
 
 ## Agradecimentos
 - Deborah Regina Freitas Dantas (Coordenadora do Polo UNICEU Caminho do Mar)
-- Murilo Henrique dos Santos Lima (Orientadora do Projeto Integrador II - Univesp)
+- Murilo Henrique dos Santos Lima (Orientador do Projeto Integrador II - Univesp)
 
 ## Licença
 - Este projeto está licenciado sob a MIT License. [![NPM](https://img.shields.io/npm/l/react)](https://github.com/kevinpiovezan/Univesp_PI1/blob/main/LICENSE) 
