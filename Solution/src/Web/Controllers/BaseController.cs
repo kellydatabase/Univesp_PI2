@@ -8,7 +8,7 @@ using Univesp.CaminhoDoMar.ProjetoIntegradorApplicationCore.Interfaces.Service;
 namespace Univesp.CaminhoDoMar.ProjetoIntegradorWeb.Controllers
 {
     #if !DEBUG
-        [Authorize]
+        //[Authorize]
     #endif
     public class BaseController : Controller
     {
@@ -36,17 +36,17 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorWeb.Controllers
                 Email = "deborah.dantas@polo.univesp.br",
                 IsAdmin = true
             });
-            if (!_identityService.IsAuthenticated())
-            {
-                context.Result = RedirectToAction("Login","Account");
-            } else
-            {
-                var usuario = _usuarioRepository.ObterUsuarioOuInserir(_identityService.ObterEmail(), _identityService.ObterEmail()).Result;
-                if(!usuario.IsAdmin)
-                {
-                    context.Result = View("NaoAutorizado");
-                }
-            }
+            //if (!_identityService.IsAuthenticated())
+            //{
+             //   context.Result = RedirectToAction("Login","Account");
+            //} else
+            //{
+                //var usuario = _usuarioRepository.ObterUsuarioOuInserir(_identityService.ObterEmail(), _identityService.ObterEmail()).Result;
+                //if(!usuario.IsAdmin)
+                //{
+                    //context.Result = View("NaoAutorizado");
+                //}
+            //}
 
 
             base.OnActionExecuting(context);
