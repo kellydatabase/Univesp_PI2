@@ -19,7 +19,7 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorInfrastructure.Services
 
         public string ObterEmail()
         {
-#if DEBUG
+#if !DEBUG
             return "kevinpiovezan@gmail.com";
 #else
             // return GetUser().Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
@@ -29,7 +29,7 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorInfrastructure.Services
 
         public string ObterNome()
         {
-#if DEBUG
+#if !DEBUG
             return "Kevin Piovezan";
 #else
             return  GetUser().Identity.Name;
