@@ -1,8 +1,8 @@
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/kellydatabase/Univesp_PI1/blob/main/LICENSE)
+
 # INFOGESTÃO 2: Automatização do Gerenciamento de Dados do Polo Caminho do Mar
 
 ## Como APIs e Cloud Transformam a Infogestão: Melhorias e Automatização no Gerenciamento de Dados do Polo Caminho do Mar 
-
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/kellydatabase/Univesp_PI1/blob/main/LICENSE)
 
 ## Sobre a aplicação
 Esse repositório é dedicado ao INFOGESTÃO2: Automatização do Gerenciamento de Dados do Polo Caminho do Mar é uma aplicação, criada pelos alunos do Eixo de Computação da Faculdade Virtual do Estado de São Paulo - Univesp e faz parte do Projeto Integrador II do 5° semestre do curso.
@@ -17,9 +17,9 @@ Conheça mais sobre a UNIVESP
 # ---
 
 
-# Projeto Integrador II-  Eixo Computação
+# Projeto Integrador II -  Eixo Computação
 ## Objetivo
-- Desenvolver um software com framework web que utilize noções de banco de dados, praticando controle de versão 
+- Desenvolver um software com framework web que utilize banco de dados, inclua script web (Javascript), nuvem, uso de API, acessibilidade, controle de versão e testes. Opcionalmente, incluir análise de dados.
 
 ## Ementa
 - Resolução de problemas
@@ -27,31 +27,41 @@ Conheça mais sobre a UNIVESP
 - Desenvolvimento web com framework
 - HTML
 - CSS
+  Linguiagem de Script
 - Banco de Dados
 - Controle de Versão
+- Nuvem
+- API
 
 
 # Layout da aplicação
 
-## Vídeo de apresentação
+## Vídeo de demonstração da aplicação
+![infogestao](https://github.com/user-attachments/assets/bc347498-ed20-4f40-9e2e-f66bbdf1e8d7)
 
-https://github.com/kellydatabase/Teste/assets/122828003/863a259f-0af6-4fdf-ae60-efbf6c0b1d66
 
 ## Conhecendo as telas
+
+## Login - Autenticação de acesso
+![home](https://github.com/user-attachments/assets/5095a89e-2098-4a39-a851-4285ff447f51)
+
 ## Tela Home
-![tela_inicial_v1](https://github.com/kellydatabase/Teste/assets/122828003/ad4149cf-58a4-456b-b1c3-5b9523fb62d0)
+![home1](https://github.com/user-attachments/assets/f2d59467-5690-45dc-b15c-c907c90725be)
 
 ## Menu
-![menu](https://github.com/kellydatabase/Teste/assets/122828003/864f7e7b-751e-4571-aee8-5d094854a9a5)
-
-## Carga de alunos
-![tela_carga_v1](https://github.com/kellydatabase/Teste/assets/122828003/bb3f52f5-478e-43f3-9d31-2d55399f37fa)
+![menu](https://github.com/user-attachments/assets/34473b73-b2e2-4dd0-a47c-d5125e3b9b5b)
 
 ## Cadastro de alunos
-![tela_cadastro_v1](https://github.com/kellydatabase/Teste/assets/122828003/f3d9e5aa-e9d8-45a4-bf6a-94df41275b1f)
+![cadastro_alunos](https://github.com/user-attachments/assets/c404797b-2094-4fd6-9317-0e30c1480b50)
 
 ## Tela de busca
-![tela_busca_v1](https://github.com/kellydatabase/Teste/assets/122828003/19b388aa-673c-4d97-bfa6-f332b701b195)
+![buscar](https://github.com/user-attachments/assets/b7425c6d-8569-4f04-8857-eed145e3ef2a)
+
+## Tela API - Google Maps
+Em relação à integração da API do Google Maps. Tal funcionalidade permitirá à secretaria do Polo Caminho do Mar. obter uma visualização geográfica das residências dos alunos em relação ao endereço do Polo. 
+
+
+![maps](https://github.com/user-attachments/assets/09392888-57b2-4617-b057-1a2347c7228e)
 
 
 
@@ -67,7 +77,13 @@ https://github.com/kellydatabase/Teste/assets/122828003/863a259f-0af6-4fdf-ae60-
 - CSS 3
 - Bootstrap 4
 
-# Como executar o projeto
+## Servidor cloud
+- Amazon Web Service (AWS)
+  
+## API
+- Google API
+
+# Como executar o projeto localmente
 
 ## Aplicação e banco de dados 
 Pré-requisitos:
