@@ -53,7 +53,7 @@ A aplicação consiste em auxiliar a Secretaria no cadastro, consulta e emissão
 ### Tela de busca
 ![buscar](https://github.com/user-attachments/assets/b7425c6d-8569-4f04-8857-eed145e3ef2a)
 
-### Tela API - Google Maps
+### API - Google My Maps
 Sobre à integração da API do Google Maps, tal funcionalidade permitirá à secretaria do Polo Caminho do Mar. obter uma visualização geográfica das residências dos alunos em relação ao endereço do Polo. 
 
 ![maps](https://github.com/user-attachments/assets/09392888-57b2-4617-b057-1a2347c7228e)
@@ -64,7 +64,8 @@ Sobre à integração da API do Google Maps, tal funcionalidade permitirá à se
 ### Back end
 - Framework: .NET CORE 3.1
 - Linguagem: C# 8.0
-## Banco de dados
+  
+### Banco de dados
 - MySQL
   
 ### Front end
@@ -72,7 +73,7 @@ Sobre à integração da API do Google Maps, tal funcionalidade permitirá à se
 - CSS 3
 - Bootstrap 4
 
-## Servidor cloud
+### Servidor cloud
 - Amazon Web Service (AWS)
   
 ### API
