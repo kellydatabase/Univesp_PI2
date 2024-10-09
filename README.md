@@ -86,7 +86,7 @@ Pré-requisitos:
 
 ```bash
 # Clonar repositório
-git clone https://github.com/kevinpiovezan/Univesp_PI1
+git clone https://github.com/kevinpiovezan/Univesp_PI2
 
 # Instalação do componente Docker desktop(Windows e Mac) ou docker daemon e docker-compose(Linux):
 https://docs.docker.com/get-docker/
@@ -123,7 +123,7 @@ http://localhost:8080
 ## Licença
 - Este projeto está licenciado sob a MIT License. [![NPM](https://img.shields.io/npm/l/react)](https://github.com/kevinpiovezan/Univesp_PI2/blob/main/LICENSE) 
 ```bash
-https://github.com/kellydatabase/Univesp_PI1/blob/main/LICENSE
+https://github.com/kellydatabase/Univesp_PI2/blob/main/LICENSE
 
 ```
 # ---
