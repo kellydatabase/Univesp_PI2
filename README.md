@@ -1,21 +1,17 @@
+
+![Univesp_logo_png_rgb](https://github.com/user-attachments/assets/e473e15f-0937-4da0-b2e8-06d2bbf013e9)
+
+
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/kellydatabase/Univesp_PI1/blob/main/LICENSE)
 
 # INFOGESTÃO 2: Automatização do Gerenciamento de Dados do Polo Caminho do Mar
 
-## Como APIs e Cloud Transformam a Infogestão: Melhorias e Automatização no Gerenciamento de Dados do Polo Caminho do Mar 
+## Como APIs e Cloud Transformam a Infogestão: Melhorias e Automatização no Gerenciamento de Dados do Polo Caminho do Mar
 
 ## Sobre a aplicação
 Esse repositório é dedicado ao INFOGESTÃO2: Automatização do Gerenciamento de Dados do Polo Caminho do Mar é uma aplicação, criada pelos alunos do Eixo de Computação da Faculdade Virtual do Estado de São Paulo - Univesp e faz parte do Projeto Integrador II do 5° semestre do curso.
 
 A aplicação consiste em auxiliar a Secretaria no cadastro, consulta e emissão de relatórios dos alunos do Polo Ceu Caminho do Mar.
-# ---
-Conheça mais sobre a UNIVESP
-
-![Univesp_logo_png_rgb](https://github.com/user-attachments/assets/9999993f-8def-4415-90c4-a5d44ce51561)
-
-     https://univesp.br/
-# ---
-
 
 # Projeto Integrador II -  Eixo Computação
 ## Objetivo
@@ -36,7 +32,7 @@ Conheça mais sobre a UNIVESP
 
 # Layout da aplicação
 
-## Vídeo de demonstração da aplicação
+### Vídeo rápido da aplicação em uso
 ![infogestao](https://github.com/user-attachments/assets/bc347498-ed20-4f40-9e2e-f66bbdf1e8d7)
 
 
@@ -115,7 +111,10 @@ http://localhost:8080
 - Kelly Rodrigues de Jesus
 - Kevin Christopher Piovezan
 - Ludmila Alves Pinto
-- Vitor da Silva Palacios  
+- Vitor da Silva Palacios
+
+ ## Dados do grupo:
+ DRP14-Projeto Integrador em Computação II-Turma 002
 
 ## Agradecimentos
 - Deborah Regina Freitas Dantas (Coordenadora do Polo UNICEU Caminho do Mar)
@@ -127,4 +126,10 @@ http://localhost:8080
 https://github.com/kellydatabase/Univesp_PI1/blob/main/LICENSE
 
 ```
+# ---
+Conheça mais sobre a UNIVESP
 
+![Univesp_logo_png_rgb](https://github.com/user-attachments/assets/9999993f-8def-4415-90c4-a5d44ce51561)
+
+     https://univesp.br/
+# ---
