@@ -1,17 +1,21 @@
 # INFOGESTÃO 2: Automatização do Gerenciamento de Dados do Polo Caminho do Mar
 
-Como APIs e Cloud Transformam a Infogestão: Melhorias e Automatização no Gerenciamento de Dados do Polo Caminho do Mar 
+## Como APIs e Cloud Transformam a Infogestão: Melhorias e Automatização no Gerenciamento de Dados do Polo Caminho do Mar 
 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/kellydatabase/Univesp_PI1/blob/main/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/kellydatabase/Univesp_PI1/blob/main/LICENSE)
 
-# Sobre a aplicação
-Esse repositório é dedicado ao INFOGESTÃO: Automatização do Gerenciamento de Dados do Polo Caminho do Mar é uma aplicação, criada pelos alunos do Eixo de Computação da Faculdade Virtual do Estado de São Paulo - Univesp e faz parte do Projeto Integrador I do 5° semestre do curso.
+## Sobre a aplicação
+Esse repositório é dedicado ao INFOGESTÃO2: Automatização do Gerenciamento de Dados do Polo Caminho do Mar é uma aplicação, criada pelos alunos do Eixo de Computação da Faculdade Virtual do Estado de São Paulo - Univesp e faz parte do Projeto Integrador II do 5° semestre do curso.
 
 A aplicação consiste em auxiliar a Secretaria no cadastro, consulta e emissão de relatórios dos alunos do Polo Ceu Caminho do Mar.
+# ---
+Conheça mais sobre a UNIVESP
 
-Site Faculdade Virtual do Estado de São Paulo - Univesp: https://univesp.br/
+![univesp-branco-transparente](https://github.com/user-attachments/assets/799e6850-4191-4795-801e-52181cba25f3) 
 
-![Univesp_logo_png_rgb](https://github.com/kellydatabase/Teste/assets/122828003/5416a6ca-754c-4f38-9216-d2a20a1563e3)
+     https://univesp.br/
+# ---
+
 
 # Projeto Integrador II-  Eixo Computação
 ## Objetivo
