@@ -2,7 +2,7 @@
 ![Univesp_logo_png_rgb](https://github.com/user-attachments/assets/e473e15f-0937-4da0-b2e8-06d2bbf013e9)
 
 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/kellydatabase/Univesp_PI1/blob/main/LICENSE)
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/kellydatabase/Univesp_PI2/blob/main/LICENSE)
 
 ## INFOGESTÃO 2: Automatização do Gerenciamento de Dados do Polo Caminho do Mar
 
