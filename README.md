@@ -4,20 +4,20 @@
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/kellydatabase/Univesp_PI1/blob/main/LICENSE)
 
-# INFOGESTÃO 2: Automatização do Gerenciamento de Dados do Polo Caminho do Mar
+## INFOGESTÃO 2: Automatização do Gerenciamento de Dados do Polo Caminho do Mar
 
-## Como APIs e Cloud Transformam a Infogestão: Melhorias e Automatização no Gerenciamento de Dados do Polo Caminho do Mar
+### Como APIs e Cloud Transformam a Infogestão: Melhorias e Automatização no Gerenciamento de Dados do Polo Caminho do Mar
 
 ## Sobre a aplicação
 Esse repositório é dedicado ao INFOGESTÃO2: Automatização do Gerenciamento de Dados do Polo Caminho do Mar é uma aplicação, criada pelos alunos do Eixo de Computação da Faculdade Virtual do Estado de São Paulo - Univesp e faz parte do Projeto Integrador II do 5° semestre do curso.
 
 A aplicação consiste em auxiliar a Secretaria no cadastro, consulta e emissão de relatórios dos alunos do Polo Ceu Caminho do Mar.
 
-# Projeto Integrador II -  Eixo Computação
-## Objetivo
+## Projeto Integrador II -  Eixo Computação
+### Objetivo
 - Desenvolver um software com framework web que utilize banco de dados, inclua script web (Javascript), nuvem, uso de API, acessibilidade, controle de versão e testes. Opcionalmente, incluir análise de dados.
 
-## Ementa
+### Ementa
 - Resolução de problemas
 - Levantamento de requisitos
 - Desenvolvimento web com framework
@@ -30,7 +30,7 @@ A aplicação consiste em auxiliar a Secretaria no cadastro, consulta e emissão
 - API
 
 
-# Layout da aplicação
+## Layout da aplicação
 
 ### Vídeo rápido da aplicação em uso
 ![infogestao](https://github.com/user-attachments/assets/bc347498-ed20-4f40-9e2e-f66bbdf1e8d7)
@@ -38,37 +38,36 @@ A aplicação consiste em auxiliar a Secretaria no cadastro, consulta e emissão
 
 ## Conhecendo as telas
 
-## Login - Autenticação de acesso
+### Login - Autenticação de acesso
 ![home](https://github.com/user-attachments/assets/5095a89e-2098-4a39-a851-4285ff447f51)
 
-## Tela Home
+### Tela Home
 ![home1](https://github.com/user-attachments/assets/f2d59467-5690-45dc-b15c-c907c90725be)
 
-## Menu
+### Menu
 ![menu](https://github.com/user-attachments/assets/34473b73-b2e2-4dd0-a47c-d5125e3b9b5b)
 
-## Cadastro de alunos
+### Cadastro de alunos
 ![cadastro_alunos](https://github.com/user-attachments/assets/c404797b-2094-4fd6-9317-0e30c1480b50)
 
-## Tela de busca
+### Tela de busca
 ![buscar](https://github.com/user-attachments/assets/b7425c6d-8569-4f04-8857-eed145e3ef2a)
 
-## Tela API - Google Maps
-Em relação à integração da API do Google Maps. Tal funcionalidade permitirá à secretaria do Polo Caminho do Mar. obter uma visualização geográfica das residências dos alunos em relação ao endereço do Polo. 
-
+### Tela API - Google Maps
+Sobre à integração da API do Google Maps, tal funcionalidade permitirá à secretaria do Polo Caminho do Mar. obter uma visualização geográfica das residências dos alunos em relação ao endereço do Polo. 
 
 ![maps](https://github.com/user-attachments/assets/09392888-57b2-4617-b057-1a2347c7228e)
 
 
 
-# Tecnologias utilizadas
-## Back end
+## Tecnologias utilizadas
+### Back end
 - Framework: .NET CORE 3.1
 - Linguagem: C# 8.0
 ## Banco de dados
 - MySQL
   
-## Front end
+### Front end
 - HTML 5
 - CSS 3
 - Bootstrap 4
@@ -76,12 +75,12 @@ Em relação à integração da API do Google Maps. Tal funcionalidade permitir�
 ## Servidor cloud
 - Amazon Web Service (AWS)
   
-## API
+### API
 - Google API
 
-# Como executar o projeto localmente
+## Como executar o projeto localmente
 
-## Aplicação e banco de dados 
+### Aplicação e banco de dados 
 Pré-requisitos:
 
 ```bash
@@ -102,7 +101,7 @@ docker-compose up --build --remove-orphans --force-recreate
 http://localhost:8080
 ```
 
-# Autores
+## Autores
 
 - Caio Cesar Silva Lopes
 - Carlos Eduardo Rodrigues Paião
