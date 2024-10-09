@@ -11,7 +11,7 @@ A aplicação consiste em auxiliar a Secretaria no cadastro, consulta e emissão
 # ---
 Conheça mais sobre a UNIVESP
 
-![univesp-branco-transparente](https://github.com/user-attachments/assets/799e6850-4191-4795-801e-52181cba25f3) 
+![Univesp_logo_png_rgb](https://github.com/user-attachments/assets/9999993f-8def-4415-90c4-a5d44ce51561)
 
      https://univesp.br/
 # ---
