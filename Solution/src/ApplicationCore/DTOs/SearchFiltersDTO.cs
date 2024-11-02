@@ -11,6 +11,7 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegrador.ApplicationCore.DTOs
         public string RA { get; set; }
         public string Cpf { get; set; }
         public string Nascimento { get; set; }
+        public string Conclusao_Em { get; set; }
         public int Status_Matricula { get; set; }
         
         public bool? EnsinoMedio_Escola_Publica { get; set; }

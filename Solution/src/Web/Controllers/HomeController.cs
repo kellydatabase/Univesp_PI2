@@ -33,8 +33,22 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorWeb.Controllers
         public async Task<IActionResult> Index()
         {
             var usuarios = await _usuarioRepository.ObterTodos();
-            Console.WriteLine("TO AQUI PORRA");
             Console.WriteLine(_identityService.ObterEmail());
+            Usuario usuarioLogado = _usuarioRepository.ObterPorEmail(_identityService.ObterEmail());
+
+            var model = new HomeModel()
+            {
+                UsuarioLogado = usuarioLogado,
+                Alunos = await _alunoRepository.ObterTodos(),
+            };
+
+            model.TodosUsuarios = usuarios;
+            return View(model);
+        }
+        [HttpGet("Mapa")]
+        public async Task<IActionResult> Mapa()
+        {
+            var usuarios = await _usuarioRepository.ObterTodos();
             Usuario usuarioLogado = _usuarioRepository.ObterPorEmail(_identityService.ObterEmail());
 
             var model = new HomeModel()
