@@ -96,7 +96,10 @@
         <div class="form-group col-lg-3 col-12">
             <label for="nascimento">Nascido até:</label>
             <input id="nascimento" name="nascimento" class="form-control" type="date"/>
-            
+        </div>
+        <div class="form-group col-lg-3 col-12">
+            <label for="conclusao_em">Concluiu o ensino médio até:</label>
+            <input id="conclusao_em" name="nascimento" class="form-control" type="date"/>
         </div>
         
     </form>
@@ -219,6 +222,7 @@
         let cadastro_SpTrans = document.getElementById('sptrans').value;
         let autorizacao_Imagem = document.getElementById('autorizacao_imagem').value;
         let nascimento = document.getElementById("nascimento").value;
+        let conclusao_Em = document.getElementById("conclusao_em").value;
         
         if(professor === "sim"){
             professor = true;
@@ -280,7 +284,8 @@
             RA: document.getElementById('RA').value,
             status_Matricula: parseInt(document.getElementById('matricula').value),
             eixo: document.getElementById('eixo').value,
-            nascimento:nascimento
+            nascimento:nascimento,
+            conclusao_Em: conclusao_Em
         };
         return data;
     }

@@ -1,0 +1,57 @@
+﻿@model Univesp.CaminhoDoMar.ProjetoIntegrador.Web.Models.HomeModel
+@{
+    ViewData["Title"] = "Home";
+
+}
+<link href="~/css/dashboard.css?v=14032024.1604" rel="stylesheet" />
+
+
+<div class="content-title">
+    <h4 class="page-title">Mapa dos alunos</h4>
+</div>
+<div class="container px-0 d-flex" style="justify-content:center;">
+    <iframe src="https://www.google.com/maps/d/embed?mid=18zS86dEphSurqlwrWsFVqIFpbeTFMvg&hl=pt-BR&ehbc=2E312F" width="900" height="480"></iframe>
+</div>
+<script src="~/lib/chartjs/dist/chart.min.js"></script>
+<script src="~/lib/chartjs/dist/custom_plugins.js"></script>
+<script src="~/lib/chartjs/dist/chartjs-plugin-datalabels.min.js"></script>
+<script src="~/lib/palette.min.js"></script>
+
+<style>
+    @@media screen and (min-width: 768px) {
+        #buscarAlunos {
+            display: block !important;
+        }
+    }
+
+    .dash {
+        display: flex;
+    }
+
+    .side-data {
+        font-size: 1rem;
+    }
+
+    .cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        /*flex: 0 0 300px;*/
+    }
+
+    #graphs-section{
+        flex-grow:1;
+    }
+
+    .card-dashboard {
+        margin: 0;
+        margin-bottom: 1rem;
+        flex: 0 0 calc(100%);
+        border-radius: .5rem;
+    }
+</style>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
