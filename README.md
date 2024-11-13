@@ -38,14 +38,14 @@ A aplicação consiste em auxiliar a Secretaria no cadastro, consulta e emissão
 
 ## Conhecendo as telas
 
-### Login - Autenticação de acesso
-![home](https://github.com/user-attachments/assets/5095a89e-2098-4a39-a851-4285ff447f51)
 
 ### Tela Home
-![home1](https://github.com/user-attachments/assets/f2d59467-5690-45dc-b15c-c907c90725be)
+![home](https://github.com/user-attachments/assets/db7294f9-b0aa-4073-b52a-7bcb26557eb9)
+
 
 ### Menu
-![menu](https://github.com/user-attachments/assets/34473b73-b2e2-4dd0-a47c-d5125e3b9b5b)
+
+![menu](https://github.com/user-attachments/assets/1a3d9b64-c2aa-4895-bf3b-935aae43260a)
 
 ### Cadastro de alunos
 ![cadastro_alunos](https://github.com/user-attachments/assets/c404797b-2094-4fd6-9317-0e30c1480b50)
@@ -53,10 +53,9 @@ A aplicação consiste em auxiliar a Secretaria no cadastro, consulta e emissão
 ### Tela de busca
 ![buscar](https://github.com/user-attachments/assets/b7425c6d-8569-4f04-8857-eed145e3ef2a)
 
-### API - Google My Maps
-Sobre à integração da API do Google Maps, tal funcionalidade permitirá à secretaria do Polo Caminho do Mar. obter uma visualização geográfica das residências dos alunos em relação ao endereço do Polo. 
-
-![maps](https://github.com/user-attachments/assets/09392888-57b2-4617-b057-1a2347c7228e)
+### Mapa
+Sobre à integração com o Google Maps, tal funcionalidade permitirá à secretaria do Polo Caminho do Mar. obter uma visualização geográfica das residências dos alunos em relação ao endereço do Polo. 
+![mapas](https://github.com/user-attachments/assets/bd2ed6a4-3132-4292-8c37-14e110af660e)
 
 
 
