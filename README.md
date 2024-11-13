@@ -33,7 +33,8 @@ A aplicação consiste em auxiliar a Secretaria no cadastro, consulta e emissão
 ## Layout da aplicação
 
 ### Vídeo rápido da aplicação em uso
-![infogestao](https://github.com/user-attachments/assets/bc347498-ed20-4f40-9e2e-f66bbdf1e8d7)
+
+![Video_rapido](https://github.com/user-attachments/assets/cbe7abe5-45ca-4a4e-8bfc-31afbaa293dc)
 
 
 ## Conhecendo as telas
@@ -75,9 +76,6 @@ Sobre à integração com o Google Maps, tal funcionalidade permitirá à secret
 ### Servidor cloud
 - Amazon Web Service (AWS)
   
-### API
-- Google API
-
 ## Como executar o projeto localmente
 
 ### Aplicação e banco de dados 
